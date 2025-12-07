@@ -122,6 +122,17 @@ body {
   font-weight: 500;
 }
 
+.arrow-icon {
+  font-family: monospace;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.arrow-icon.expanded {
+  transform: rotate(180deg);
+}
+
 .submenu {
   display: flex;
   flex-direction: column;
@@ -134,11 +145,18 @@ body {
   color: var(--text-muted);
   padding-top: 6px;
   padding-bottom: 6px;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.sub-item:hover {
+  color: var(--text-main);
 }
 
 .sub-item.active {
-  color: var(--primary-color);
+  color: var(--text-muted);
   font-weight: 600;
 }
 

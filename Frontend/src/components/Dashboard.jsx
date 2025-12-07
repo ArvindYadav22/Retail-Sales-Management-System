@@ -64,6 +64,20 @@ const Dashboard = () => {
         }
     };
 
+    const [expandedSections, setExpandedSections] = useState({
+        services: true,
+        invoices: true
+    });
+
+    const toggleSection = (section) => {
+        setExpandedSections(prev => ({
+            ...prev,
+            [section]: !prev[section]
+        }));
+    };
+
+    // ... existing loadFilters and loadSales ...
+
     const handleFilterChange = (e) => {
         const { name, value } = e.target;
         setFilters(prev => ({ ...prev, [name]: value }));
@@ -88,23 +102,37 @@ const Dashboard = () => {
                     <div className="nav-item">Intake</div>
 
                     <div className="nav-section">
-                        <div className="nav-item has-submenu">
+                        <div
+                            className="nav-item has-submenu"
+                            onClick={() => toggleSection('services')}
+                        >
                             Services
-                            <span className="arrow-icon">^</span>
+                            <span className={`arrow-icon ${expandedSections.services ? 'expanded' : ''}`}>^</span>
                         </div>
-                        <div className="submenu">
-                            <div className="nav-item sub-item"> Pre-active</div>
-                            <div className="nav-item sub-item active"> Active</div>
-                            <div className="nav-item sub-item"> Blocked</div>
-                            <div className="nav-item sub-item"> Closed</div>
-                        </div>
+                        {expandedSections.services && (
+                            <div className="submenu">
+                                <div className="nav-item sub-item"> Pre-active</div>
+                                <div className="nav-item sub-item active"> Active</div>
+                                <div className="nav-item sub-item"> Blocked</div>
+                                <div className="nav-item sub-item"> Closed</div>
+                            </div>
+                        )}
                     </div>
 
                     <div className="nav-section">
-                        <div className="nav-item has-submenu">
+                        <div
+                            className="nav-item has-submenu"
+                            onClick={() => toggleSection('invoices')}
+                        >
                             Invoices
-                            <span className="arrow-icon">^</span>
+                            <span className={`arrow-icon ${expandedSections.invoices ? 'expanded' : ''}`}>^</span>
                         </div>
+                        {expandedSections.invoices && (
+                            <div className="submenu">
+                                <div className="nav-item sub-item"> Proforma Invoices</div>
+                                <div className="nav-item sub-item"> Final Invoices</div>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

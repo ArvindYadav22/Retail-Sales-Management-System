@@ -1,5 +1,8 @@
 # Retail Sales Management System - Frontend
 
+## Live Demo: [https://retail-sales-management-opal.vercel.app/](https://retail-sales-management-opal.vercel.app/)
+
+
 This is the frontend client for the Retail Sales Management System, built with React and Vite. It provides a comprehensive dashboard for visualizing sales data, filtering records, and viewing transaction details.
 
 ## Features

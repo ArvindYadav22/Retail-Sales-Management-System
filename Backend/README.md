@@ -1,5 +1,8 @@
 # Retail Sales Management System - Backend
 
+## Live API: [https://retail-backend-erdm.onrender.com/](https://retail-backend-erdm.onrender.com/)
+
+
 This is the RESTful API backend for the Retail Sales Management System. It handles data persistence, querying, and seeding for the retail dashboard.
 
 ## Features
