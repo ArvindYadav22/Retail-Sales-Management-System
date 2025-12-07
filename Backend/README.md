@@ -48,7 +48,7 @@ This is the RESTful API backend for the Retail Sales Management System. It handl
     *   page: Page number (default 1)
     *   limit: Items per page (default 10)
     *   search: Search term (Name or Phone)
-    *   region, gender, minAge, maxAge, category, paymentMethod, sortBy...
+    *   region, gender, age range, category, paymentMethod, sortBy...
 
 ### 2. Get Filters
 *   URL: /api/sales/filters

@@ -19,8 +19,6 @@ const Dashboard = () => {
         paymentMethod: '',
         tags: '',
         gender: '',
-        minAge: '',
-        maxAge: '',
         startDate: '',
         endDate: '',
         sortBy: 'date',
@@ -76,7 +74,6 @@ const Dashboard = () => {
         }));
     };
 
-    // ... existing loadFilters and loadSales ...
 
     const handleFilterChange = (e) => {
         const { name, value } = e.target;
@@ -160,8 +157,6 @@ const Dashboard = () => {
                                 paymentMethod: '',
                                 tags: '',
                                 gender: '',
-                                minAge: '',
-                                maxAge: '',
                                 startDate: '',
                                 endDate: '',
                                 sortBy: 'date',
