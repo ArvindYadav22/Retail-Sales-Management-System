@@ -7,7 +7,7 @@ class SalesController {
             res.json(result);
         } catch (error) {
             console.error('Error fetching sales:', error);
-            res.status(500).json({ error: 'Internal Server Error' });
+            res.status(500).json({ error: error.message, stack: error.stack });
         }
     }
 
@@ -17,7 +17,7 @@ class SalesController {
             res.json(filters);
         } catch (error) {
             console.error('Error fetching filter options:', error);
-            res.status(500).json({ error: 'Internal Server Error' });
+            res.status(500).json({ error: error.message });
         }
     }
 }
