@@ -1,16 +1,39 @@
-# React + Vite
+# Retail Sales Management System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend client for the Retail Sales Management System, built with React and Vite. It provides a comprehensive dashboard for visualizing sales data, filtering records, and viewing transaction details.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   **Interactive Dashboard**: View key statistics (Total Units, Total Amount, Total Discount).
+*   **Advanced Filtering**: Filter sales by Customer Region, Gender, Age Range, Product Category, Tags, Payment Method, and Date.
+*   **Search**: Real-time search by Customer Name or Phone Number.
+*   **Sorting**: Sort records by Name, Date, or Amount.
+*   **Transaction Details**: View detailed breakdowns of individual sales in a modal.
+*   **Responsive Design**: Clean, modern UI adapted for various screen sizes.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   React 18
+*   Vite (Build Tool)
+*   CSS3 (Custom styling with variables)
 
-## Expanding the ESLint configuration
+## Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  Navigate to the frontend directory:
+    cd Frontend
+
+2.  Install dependencies:
+    npm install
+
+3.  Run the development server:
+    npm run dev
+    The application will usually run on http://localhost:5173.
+
+4.  Build for production:
+    npm run build
+
+## Project Structure
+
+*   src/components: React components (Dashboard, TransactionModal).
+*   src/services: API handling logic (using fetch).
+*   src/styles: Global and component-specific CSS.
